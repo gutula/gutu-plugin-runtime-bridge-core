@@ -1,0 +1,4 @@
+- Runtimes must be registered before they can heartbeat, watch workspaces, or expose local skills.
+- Watched workspaces are tenant-scoped and always tied to a single runtime record.
+- Provider detection and local skill discovery are durable inventories, not implicit runtime side effects.
+- Session prepare and resume flows must keep timestamps explicit for recovery and auditability.

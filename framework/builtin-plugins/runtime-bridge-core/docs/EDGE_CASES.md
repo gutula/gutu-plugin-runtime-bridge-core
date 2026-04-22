@@ -1,0 +1,4 @@
+- Reject watch, detect, discover, or session operations when the runtime is unknown.
+- Allow repeated runtime registration and discovery to converge by upsert instead of duplicating state.
+- Preserve resumable session metadata even when the runtime is degraded.
+- Keep watched workspace branch strategy explicit so operator recovery is deterministic.

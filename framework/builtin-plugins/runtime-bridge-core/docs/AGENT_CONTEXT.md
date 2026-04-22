@@ -1,0 +1,1 @@
+Runtime Bridge Core is the governed daemon and runtime control plane for watched workspaces, local skill discovery, and resumable sessions. It turns local runtime posture into explicit platform state instead of implicit machine-local behavior.

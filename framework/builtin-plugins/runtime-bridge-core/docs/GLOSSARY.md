@@ -1,0 +1,4 @@
+- Runtime: A daemon or local execution bridge capable of watching repos and resuming sessions.
+- Watched Workspace: A repo or worktree owned by a runtime and tracked for sync posture.
+- Provider Detection: A durable record of an installed or configured model or coding provider.
+- Local Skill Source: A runtime-discovered skill that can be promoted into governed skill contracts.
