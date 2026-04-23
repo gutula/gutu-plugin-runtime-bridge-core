@@ -54,11 +54,26 @@ This tier is justified because unit coverage exists, contract coverage exists, i
 | Manifest ID | `runtime-bridge-core` |
 | Repo | [gutu-plugin-runtime-bridge-core](https://github.com/gutula/gutu-plugin-runtime-bridge-core) |
 | Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `audit-core`, `execution-workspaces-core`, `integration-core` |
+| Recommended Plugins | None |
+| Capability Enhancing | None |
+| Integration Only | None |
+| Suggested Packs | None |
+| Standalone Supported | Yes |
 | Requested Capabilities | `ui.register.admin`, `api.rest.mount`, `data.write.runtime` |
 | Provided Capabilities | `runtime.runtimes`, `runtime.local-skills`, `runtime.sessions` |
 | Runtime | bun>=1.3.12 |
 | Database | postgres, sqlite |
 | Integration Model | Actions+Resources+UI |
+
+## Installation Guidance
+
+- Required plugins: `auth-core`, `org-tenant-core`, `role-policy-core`, `audit-core`, `execution-workspaces-core`, `integration-core`
+- Recommended plugins: none
+- Capability-enhancing plugins: none
+- Integration-only plugins: none
+- Suggested packs: none
+- Standalone supported: yes
+
 
 ## Capability Matrix
 

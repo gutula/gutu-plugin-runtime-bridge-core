@@ -54,6 +54,11 @@ Bridges governed platform workflows into external runtimes and service boundarie
 | Field | Value |
 | --- | --- |
 | Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `audit-core`, `execution-workspaces-core`, `integration-core` |
+| Recommended Plugins | None |
+| Capability Enhancing | None |
+| Integration Only | None |
+| Suggested Packs | None |
+| Standalone Supported | Yes |
 | Requested Capabilities | `ui.register.admin`, `api.rest.mount`, `data.write.runtime` |
 | Provides Capabilities | `runtime.runtimes`, `runtime.local-skills`, `runtime.sessions` |
 | Owns Data | `runtime.runtimes`, `runtime.watched-workspaces`, `runtime.provider-detections`, `runtime.local-skills`, `runtime.sessions` |
