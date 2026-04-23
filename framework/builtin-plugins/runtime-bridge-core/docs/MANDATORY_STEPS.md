@@ -1,4 +1,21 @@
-1. Register the runtime before accepting watched workspace or session state.
-2. Refresh heartbeat and sync timestamps on every runtime or workspace mutation.
-3. Keep provider and skill discovery as durable upserts rather than transient process memory.
-4. Update session resume timestamps whenever an operator or automation resumes a runtime session.
+# Runtime Bridge Core Mandatory Steps
+
+## Before shipping a change
+
+1. Update the public contract docs in `README.md` and `DEVELOPER.md`.
+2. Keep the nested docs under `framework/builtin-plugins/runtime-bridge-core/docs` synchronized with the same truth.
+3. Run the repo-local verification commands:
+   - `bun run build`
+   - `bun run typecheck`
+   - `bun run lint`
+   - `bun run test`
+   - `bun run docs:check`
+4. Run any extra lanes present for this plugin: `test:integration`, `test:migrations`, `test:unit`, `test:contracts`.
+5. Re-check that the plugin is still described through explicit command/resource/job/workflow contracts and not through undocumented hooks.
+
+## Before integrating from another plugin
+
+1. Depend on the manifest ID `runtime-bridge-core` and the package import `@plugins/runtime-bridge-core`.
+2. Use exported actions and resources first.
+3. Treat jobs, workflows, and lifecycle envelopes as explicit contracts only when they are actually exported here.
+4. Preserve the current non-goal boundary instead of building cross-plugin shortcuts that the repo does not advertise.

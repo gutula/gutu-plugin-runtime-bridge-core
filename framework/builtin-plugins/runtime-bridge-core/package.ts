@@ -5,6 +5,12 @@ export default definePackage({
   kind: "plugin",
   version: "0.1.0",
   displayName: "Runtime Bridge Core",
+  defaultCategory: {
+    id: "ai_automation",
+    label: "AI & Automation",
+    subcategoryId: "runtime_bridges",
+    subcategoryLabel: "Runtime Bridges"
+  },
   description: "Governed daemon, watched workspace, local skill, and resumable session contracts for local runtime bridging.",
   extends: [],
   dependsOn: [

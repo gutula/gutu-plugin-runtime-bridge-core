@@ -1,1 +1,37 @@
-Runtime Bridge Core is the governed daemon and runtime control plane for watched workspaces, local skill discovery, and resumable sessions. It turns local runtime posture into explicit platform state instead of implicit machine-local behavior.
+# Runtime Bridge Core Agent Context
+
+## Mission
+
+Bridges governed platform workflows into external runtimes and service boundaries without leaking orchestration assumptions into every plugin.
+
+## Code map
+
+- Package root: `framework/builtin-plugins/runtime-bridge-core`
+- Service layer: `framework/builtin-plugins/runtime-bridge-core/src/services/main.service.ts`
+- Action layer: `framework/builtin-plugins/runtime-bridge-core/src/actions/default.action.ts`
+- Resource layer: `framework/builtin-plugins/runtime-bridge-core/src/resources/main.resource.ts`
+- UI layer: `framework/builtin-plugins/runtime-bridge-core/src/ui`
+
+## Safe assumptions
+
+- Use `runtime-bridge-core` as the stable plugin identifier and `@plugins/runtime-bridge-core` as the package import name.
+- Treat declared actions and resources as the public integration surface before reaching into services.
+- Prefer explicit command, event, job, and workflow orchestration over undocumented side effects.
+
+## Forbidden claims
+
+- Do not document generic WordPress-style hooks unless they are explicitly exported.
+- Do not promise live external connectors, distributed worker infrastructure, or portal/admin surfaces that are not present in the code.
+- Do not claim a higher maturity tier than `Hardened` without adding the missing verification and operational depth first.
+
+## Verification
+
+- `bun run build`
+- `bun run typecheck`
+- `bun run lint`
+- `bun run test`
+- `bun run test:contracts`
+- `bun run test:integration`
+- `bun run test:migrations`
+- `bun run test:unit`
+- `bun run docs:check`
